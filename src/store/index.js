@@ -6,5 +6,5 @@ export const store = configureStore({
         [githubApi.reducerPath]: githubApi.reducer
     },
     middleware: (getDefaultMiddleware) =>
-    getDefaultMiddleware().concat(githubApi.middleware),
+    getDefaultMiddleware().concat(githubApi.middleware)
 })
