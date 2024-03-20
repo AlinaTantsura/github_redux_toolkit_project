@@ -14,8 +14,13 @@ export const githubApi = createApi({
                     per_page: 10
                 }
             })
+        }),
+        getUserRepositories: build.query({
+            query: (userName) => ({
+                url: `users/${userName}/repos`
+            })
         })
     })
 });
 
-export const { useSearchUsersQuery } = githubApi;
+export const { useSearchUsersQuery, useLazyGetUserRepositoriesQuery } = githubApi;
